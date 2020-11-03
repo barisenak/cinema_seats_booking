@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #242333;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: "Lato", sans-serif;
+  margin: 0;
+}
+
+.movie_container {
+  margin: 20px 0;
+}
+
+.movie_container select {
+  background-color: #fff;
+  border: 0;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  margin-left: 10px;
+  padding: 5px 15px;
+}
+
+.container {
+  perspective: 1000px;
+  margin-bottom: 25px;
+}
+
+.seat {
+  background-color: #444451;
+  height: 12px;
+  width: 15px;
+  margin: 3px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.selected {
+  background-color: rgb(24, 238, 220);
+}
+
+.occupied {
+  background-color: rgb(184, 184, 184);
+}
+
+.row {
+  display: flex;
+}
+
+.seat:not(.occupied):hover {
+  cursor: pointer;
+  transform: scale(1.3);
+}
+
+.showcase .seat:not(.occupied):hover {
+  cursor: default;
+  transform: scale(1);
+}
+
+.showcase {
+  background: rgb(0, 0, 0, 0.1);
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: rgb(184, 184, 184);
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+.showcase li {
+  display: flex;
+  margin: 0 10px;
+  justify-content: space-around;
+}
+
+.screen {
+  background-color: rgb(236, 217, 193);
+  width: 100%;
+  height: 70px;
+  margin: 15px 0;
+  transform: rotateX(-45deg);
+  box-shadow: 0 3px 10px rgb(255, 255, 255, 0.7);
+}
+
+p.text span {
+  color: rgb(24, 238, 220);
+}
